@@ -18,21 +18,21 @@ class SampleForecaster:
         self.y_test = self.X_test.copy()
         self.y_test.reset_index(inplace=True)
         self.y_test.rename(columns={'index': 'Datetime', 'Entries': 'Actual'}, inplace=True)
-        return self.y_test
+        return self.predict(self.y_test)
 
-    def predict(self):
+    def predict(self, data):
         forecast_dict = {'Datetime': [],
                          'Actual': [],
                          'Forecast_Horizon': [],
                          'Forecast_Step': [],
                          'Predicted': [], }
 
-        for index, values in self.y_test.iterrows():
-            for i in range(1, self.forecast_steps):
+        for index, values in data.iterrows():
+            for i in range(1, self.forecast_steps + 1):
                 forecast_dict['Datetime'].append(values['Datetime'])
                 forecast_dict['Forecast_Step'].append(i)
 
-            temp_df = self.y_test[index + 1:index + self.forecast_steps]
+            temp_df = data[index + 1:index + self.forecast_steps + 1]
             for idx, vls in temp_df.iterrows():
                 forecast_dict['Forecast_Horizon'].append(vls['Datetime'])
                 forecast_dict['Predicted'].append(vls['Actual'])
