@@ -4,24 +4,47 @@ import pmdarima as pm
 
 class ArimaModel:
     def __init__(self, forecast_steps):
-        self.train = None
-        self.test = None
-        self.forecast_steps = forecast_steps
-        self.forecasts = None
-        self.target = None
-        self.model = None
+        self.train = None  # training data
+        self.test = None  # test data
+        self.forecast_steps = forecast_steps  # number of time steps to forecast into the future
+        self.forecasts = None  # forecasts dataframe
+        self.target = None  # target column
+        self.model = None  # model architecture
 
     def preprocessing(self, train_data, test_data):
+        """
+        preprocess train and test data for model
+
+        Args:
+            train_data (df):
+            test_data (df):
+
+        """
         self.train = train_data[[self.target]]
         self.test = test_data[[self.target]]
-        return
 
     def fit(self):
+        """
+        initiate auto-arima model
+        start prediction on test set
+
+        Returns:
+            forecast dataframe, model architecture
+        """
         self.model = pm.auto_arima(self.train[self.target])
         self.forecasts = self.predict(self.test)
         return self.forecasts, self.model
 
     def predict(self, data):
+        """
+        predict using trained model on given dataframe
+
+        Args:
+            data (df): df to do forecasts on
+
+        Returns:
+            forecasts dataframe
+        """
         #train_list = self.train[self.target].tolist()
         test_list = data[self.target].tolist()
         output_list = []
