@@ -14,6 +14,7 @@ class ForecasterTool:
         self.forecaster_type = None
         self.forecaster_instance = None
         self.test_forecast = None
+        self.model = None
 
     def load_data(self, file, unique_id: int, target: str, features: list, freq: str):
         self.target_col = target
@@ -60,14 +61,23 @@ class ForecasterTool:
     def create_forecaster(self, forecaster_type: str, **kwargs):
         self.forecaster_type = forecaster_type
         self.forecaster_instance = forecaster_collection[forecaster_type](**kwargs)
+        self.forecaster_instance.target = self.target_col
         return self.forecaster_instance
 
     def fit(self):
         self.forecaster_instance.preprocessing(self.train, self.test)
-        self.test_forecast = self.forecaster_instance.fit()
-        return self.test_forecast
+        self.test_forecast, self.model = self.forecaster_instance.fit()
+        return self.test_forecast, self.model
 
     def predict(self):
+
+        return
+
+    def save_forecaster(self):
+
+        return
+
+    def load_forecaster(self):
 
         return
 

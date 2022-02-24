@@ -1,3 +1,3 @@
-from forecaster_tool.forecasters.SampleForecaster import SampleForecaster
+from forecaster_tool.forecasters.Arima import ArimaModel
 
-forecaster_collection = {'SampleForecaster': SampleForecaster}
+forecaster_collection = {'Arima': ArimaModel}
