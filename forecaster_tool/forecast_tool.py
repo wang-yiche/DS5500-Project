@@ -82,6 +82,7 @@ class ForecasterTool:
         return
 
     def calculate_performance(self, df):
+        
 
         return
 

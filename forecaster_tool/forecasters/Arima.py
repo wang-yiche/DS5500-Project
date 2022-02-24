@@ -17,17 +17,18 @@ class ArimaModel:
         return
 
     def fit(self):
-        self.model = pm.auto_arima(self.train[self.target].tolist())
+        self.model = pm.auto_arima(self.train[self.target])
         self.forecasts = self.predict(self.test)
         return self.forecasts, self.model
 
     def predict(self, data):
-        train_list = self.train[self.target].tolist()
+        #train_list = self.train[self.target].tolist()
         test_list = data[self.target].tolist()
         output_list = []
         for test_time_step in test_list:
-            train_list.append(test_time_step)
-            self.model = pm.auto_arima(train_list)
+            #train_list.append(test_time_step)
+            self.model.update(test_time_step)
+            #self.model = pm.auto_arima(train_list)
             output_list.append(self.model.predict(self.forecast_steps))
 
         data.reset_index(inplace=True)
