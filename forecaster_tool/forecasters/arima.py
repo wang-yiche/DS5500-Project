@@ -11,7 +11,7 @@ class ArimaModel:
         self.target = None  # target column
         self.model = None  # model architecture
 
-    def preprocessing(self, train_data, test_data):
+    def preprocessing(self):
         """
         preprocess train and test data for model
 
@@ -20,8 +20,8 @@ class ArimaModel:
             test_data (df):
 
         """
-        self.train = train_data[[self.target]]
-        self.test = test_data[[self.target]]
+        self.train = self.train[[self.target]]
+        self.test = self.test[[self.target]]
 
     def fit(self):
         """

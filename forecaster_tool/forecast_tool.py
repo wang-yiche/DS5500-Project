@@ -100,6 +100,8 @@ class ForecasterTool:
         self.forecaster_type = forecaster_type
         self.forecaster_instance = forecaster_collection[forecaster_type](**kwargs)
         self.forecaster_instance.target = self.target_col
+        self.forecaster_instance.train = self.train.copy()
+        self.forecaster_instance.test = self.test.copy()
         return self.forecaster_instance
 
     def fit(self):
@@ -109,7 +111,7 @@ class ForecasterTool:
         Returns:
             forecasts df on test set, model
         """
-        self.forecaster_instance.preprocessing(self.train, self.test)
+        self.forecaster_instance.preprocessing()
         self.test_forecast, self.model = self.forecaster_instance.fit()
         return self.test_forecast, self.model
 
