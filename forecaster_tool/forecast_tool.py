@@ -2,6 +2,7 @@ import pandas as pd
 from forecaster_tool.data_processing.pre_processing import handle_missing_value
 from forecaster_tool.forecasters.forecaster_collection import forecaster_collection
 from sklearn.metrics import mean_absolute_percentage_error, mean_squared_error, mean_absolute_error
+import dill
 
 
 class ForecasterTool:
@@ -116,13 +117,26 @@ class ForecasterTool:
 
         return
 
-    def save_forecaster(self):
+    def save_forecaster(self, custom_name):
+        """
+            Save forecaster instance to .pkl file of name custom_name
+        Args:
+            custom_name (str): user definable name given to the forecaster
+        """
+        with open(custom_name + '.pkl', 'wb') as f:
+            dill.dump(self, f)
+        print('Saved forecaster ' + custom_name)
 
-        return
-
-    def load_forecaster(self):
-
-        return
+    def load_forecaster(self, custom_name):
+        """
+            load forecaster instance from .pkl file of name custom_name
+        Args:
+            custom_name ():
+        """
+        with open(custom_name + '.pkl', 'rb') as f:
+            new_obj = dill.load(f)
+        self.__dict__.update(new_obj.__dict__)
+        print('Loaded forecaster ' + custom_name)
 
     def calculate_performance(self, df, plot=True, horizon_step=2):
         """

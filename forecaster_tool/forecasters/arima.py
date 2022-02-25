@@ -45,13 +45,13 @@ class ArimaModel:
         Returns:
             forecasts dataframe
         """
-        #train_list = self.train[self.target].tolist()
+        # train_list = self.train[self.target].tolist()
         test_list = data[self.target].tolist()
         output_list = []
         for test_time_step in test_list:
-            #train_list.append(test_time_step)
+            # train_list.append(test_time_step)
             self.model.update(test_time_step)
-            #self.model = pm.auto_arima(train_list)
+            # self.model = pm.auto_arima(train_list)
             output_list.append(self.model.predict(self.forecast_steps))
 
         data.reset_index(inplace=True)

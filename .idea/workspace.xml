@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f12dabf-143a-4079-b736-4addfc99a86a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/DS5500-Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DS5500-Project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Untitled.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Untitled.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/forecaster_tool/data_processing/pre_processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/forecaster_tool/data_processing/pre_processing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/forecaster_tool/forecast_tool.py" beforeDir="false" afterPath="$PROJECT_DIR$/forecaster_tool/forecast_tool.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forecaster_tool/forecasters/Arima.py" beforeDir="false" afterPath="$PROJECT_DIR$/forecaster_tool/forecasters/arima.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forecaster_tool/forecasters/arima.py" beforeDir="false" afterPath="$PROJECT_DIR$/forecaster_tool/forecasters/arima.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/forecaster_tool/forecasters/forecaster_collection.py" beforeDir="false" afterPath="$PROJECT_DIR$/forecaster_tool/forecasters/forecaster_collection.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
