@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f12dabf-143a-4079-b736-4addfc99a86a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/forecaster_tool/forecasters/lstm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/forecaster_tool/forecasters/train_lstm.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forecaster_tool/forecasters/lstm.py" beforeDir="false" afterPath="$PROJECT_DIR$/forecaster_tool/forecasters/lstm.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
