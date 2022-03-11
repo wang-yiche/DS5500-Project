@@ -35,11 +35,11 @@ class MLPModel:
     def get_model_architecture(self):
 
         model = Sequential()
-        model.add(Dense(50, activation='relu', input_shape=(self.look_back_steps, self.X_train.shape[2])))
+        model.add(Dense(100, activation='relu', input_shape=(self.look_back_steps, self.X_train.shape[2])))
         model.add(Flatten())
-        model.add(Dense(50, activation='relu'))
+        model.add(Dense(100, activation='relu'))
         model.add(Dense(self.forecast_steps))
-        model.compile(optimizer='adam', loss='mse', metrics=['accuracy'])
+        model.compile(optimizer='adam', loss='mse')
         return model
 
     def fit(self):
@@ -51,8 +51,8 @@ class MLPModel:
             forecast dataframe, model architecture
         """
         self.model = self.get_model_architecture()
-        es = EarlyStopping(monitor='val_loss', verbose=1, patience=10)
-        self.model.fit(self.X_train, self.y_train, epochs=100, verbose=0, validation_split=0.1, callbacks=[es])
+        es = EarlyStopping(monitor='val_loss', verbose=1, patience=20)
+        self.model.fit(self.X_train, self.y_train, epochs=300, verbose=1, validation_split=0.1, callbacks=[es])
         self.forecasts = self.predict(self.test)
         return self.forecasts, self.model
 
