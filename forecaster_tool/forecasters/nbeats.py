@@ -24,4 +24,5 @@ class NBeatsModel(MLPModel):
 
         model = NBeatsKeras(backcast_length=self.look_back_steps, forecast_length=self.forecast_steps)
         model.compile(optimizer='adam', loss='mae')
+        print(model.summary())
         return model

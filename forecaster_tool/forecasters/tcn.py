@@ -13,5 +13,5 @@ class TCNModel(MLPModel):
         model.add(tcn_layer)
         model.add(Dense(self.forecast_steps))
         model.compile(optimizer='adam', loss='mae')
-        print(tcn_full_summary(model, expand_residual_blocks=False))
+        print(model.summary())
         return model

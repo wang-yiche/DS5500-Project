@@ -41,6 +41,7 @@ class MLPModel:
         model.add(Dense(100, activation='relu'))
         model.add(Dense(self.forecast_steps))
         model.compile(optimizer='adam', loss='mse')
+        print(model.summary())
         return model
 
     def fit(self):

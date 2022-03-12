@@ -14,6 +14,8 @@
       <change beforePath="$PROJECT_DIR$/forecaster_tool/forecasters/forecaster_collection.py" beforeDir="false" afterPath="$PROJECT_DIR$/forecaster_tool/forecasters/forecaster_collection.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/forecaster_tool/forecasters/lstm.py" beforeDir="false" afterPath="$PROJECT_DIR$/forecaster_tool/forecasters/lstm.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/forecaster_tool/forecasters/mlp.py" beforeDir="false" afterPath="$PROJECT_DIR$/forecaster_tool/forecasters/mlp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forecaster_tool/forecasters/nbeats.py" beforeDir="false" afterPath="$PROJECT_DIR$/forecaster_tool/forecasters/nbeats.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forecaster_tool/forecasters/tcn.py" beforeDir="false" afterPath="$PROJECT_DIR$/forecaster_tool/forecasters/tcn.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
