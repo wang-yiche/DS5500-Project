@@ -7,6 +7,7 @@ from sklearn.preprocessing import MinMaxScaler
 
 
 class MLPModel:
+
     def __init__(self, forecast_steps, look_back_steps):
         self.look_back_steps = look_back_steps
         self.train = None  # training data
