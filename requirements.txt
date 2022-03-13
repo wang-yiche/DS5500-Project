@@ -1,0 +1,6 @@
+pmdarima
+tensorflow >= 2.6.0
+keras-tcn
+nbeats-keras
+scikit-learn
+dill

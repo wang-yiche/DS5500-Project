@@ -104,7 +104,6 @@ class MLPModel:
             window_count += 1
             for idx, vls in window_df.iterrows():
                 forecast_dict['Forecast_Horizon'].append(vls['Datetime'])
-
                 forecast_dict['Actual'].append(vls['Actual'])
 
         forecasts = pd.DataFrame.from_dict(forecast_dict)
