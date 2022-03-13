@@ -6,8 +6,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/Untitled-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/Untitled-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Untitled.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Untitled.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/Untitled1-checkpoint.ipynb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/forecaster_tool/data_processing/pre_processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/forecaster_tool/data_processing/pre_processing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/forecaster_tool/forecast_tool.py" beforeDir="false" afterPath="$PROJECT_DIR$/forecaster_tool/forecast_tool.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/forecaster_tool/forecasters/arima.py" beforeDir="false" afterPath="$PROJECT_DIR$/forecaster_tool/forecasters/arima.py" afterDir="false" />
@@ -16,6 +15,7 @@
       <change beforePath="$PROJECT_DIR$/forecaster_tool/forecasters/mlp.py" beforeDir="false" afterPath="$PROJECT_DIR$/forecaster_tool/forecasters/mlp.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/forecaster_tool/forecasters/nbeats.py" beforeDir="false" afterPath="$PROJECT_DIR$/forecaster_tool/forecasters/nbeats.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/forecaster_tool/forecasters/tcn.py" beforeDir="false" afterPath="$PROJECT_DIR$/forecaster_tool/forecasters/tcn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forecaster_tool/forecasters/transformer.py" beforeDir="false" afterPath="$PROJECT_DIR$/forecaster_tool/forecasters/transformer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
